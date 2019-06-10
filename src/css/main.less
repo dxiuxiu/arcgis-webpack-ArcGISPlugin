@@ -1,0 +1,15 @@
+// @import "~arcgis-js-api/css/main.css";
+// @import "~arcgis-js-api/css/view.css";
+
+// 报错 @import url("../themes/light/main.css")
+// ^
+// Missing semi-colon or unrecognised media features on import
+// 解决办法 node_modules/arcgis-js-api/css/main.css&&viwe.css 的 @import 语句没有分号结尾，给添加分号即可解决
+
+// @import "~arcgis-js-api/css/main.scss";
+// @import "~arcgis-js-api/css/view.scss"; 
+
+// 报错，因为 less 文件会被匹配给 less-loader 处理，但是 less 文件中又有 scss 文件就不能正常处理了
+
+@import "~arcgis-js-api/themes/light/main.css"; // = @import "~arcgis-js-api/css/main.css";
+@import "~arcgis-js-api/themes/light/main.css"; // = @import "~arcgis-js-api/css/view.css";
