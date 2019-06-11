@@ -17,6 +17,8 @@ $ yarn start
 ```
 
 `效果图`
+
+
 ![avatar](/effectPicture/start.png)
 
 ## 打包项目
@@ -28,6 +30,8 @@ $ yarn build
 ```
 
 `打包结果`
+
+
 ![avatar](/effectPicture/dist.png)
 
 ## 线上效果
@@ -39,4 +43,6 @@ $ yarn liveServer
 ```
 
 `效果图`
+
+
 ![avatar](/effectPicture/liveServer.png)
