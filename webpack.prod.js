@@ -46,8 +46,8 @@ const prodConfig = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'style/[name].css', // '[name].[hash].css',
-            chunkFilename: 'style/[id].css' //  '[id].[hash].css',
+            filename: 'style/[name].[contenthash].css', // '[name].[hash].css',
+            chunkFilename: 'style/[id].[contenthash].css' //  '[id].[hash].css',
         })
     ],
     output: {

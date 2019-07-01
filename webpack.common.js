@@ -42,7 +42,8 @@ module.exports = {
 
   plugins: [
     new ArcGISPlugin({
-      useDefaultAssetLoaders: false
+      useDefaultAssetLoaders: false,
+      locales : ['zh-cn']
     }),
     new HtmlWebPackPlugin({
       chunksSortMode: "none",

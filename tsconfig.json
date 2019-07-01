@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
         "outDir": "./dist",
-        "module": "es6",
+        "module": "es6", // amd
         "target": "es5",
         "allowJs": false, 
     },
     "include": [
     "src/**/*"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }

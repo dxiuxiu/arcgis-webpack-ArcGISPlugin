@@ -43,7 +43,9 @@ const devConfig = {
         contentBase: './dist',
         open: true,
         hot: true, // 让 devServer 开启 HMR 功能
-        hotOnly: true, // 即使 HMR 功能未生效浏览器也不自动刷新
+        hotOnly: false, // true 即使 HMR 功能未生效浏览器也不自动刷新
+        useLocalIp: true,
+        host : '0.0.0.0',
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
