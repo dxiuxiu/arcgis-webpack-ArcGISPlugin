@@ -4,12 +4,11 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path')
 module.exports = {
   entry: {
-    index: "./src/index.ts"
+    index: "./src/index.tsx"
   },
 
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.ts|tsx?$/,
         loader: "ts-loader",
         options: {
@@ -33,7 +32,7 @@ module.exports = {
           loader: "file-loader",
           options: {
             name: 'static/media/[name].[hash:7].[ext]',
-            publicPath : '/'
+            publicPath: '/'
           }
         }]
       }
@@ -49,16 +48,24 @@ module.exports = {
       template: './index.html',
     }),
   ],
-  resolve: { // 不配置会报错
-    // modules: [ // js
-    //   path.resolve(__dirname, "/src"),
-    //   path.resolve(__dirname, "node_modules/")
-    // ],
+  resolve: {
     extensions: [".ts", ".tsx", ".js", ".scss", ".css"] // ？
   },
+  // node: {
+  //   process: false,
+  //   global: false,
+  //   fs: "empty" // 不要会爆粗
+  // }
+  externals: [
+    (context, request, callback) => {
+      if (/pe-wasm$/.test(request)) {
+        return callback(null, "amd " + request);
+      }
+      callback();
+    }
+  ],
   node: {
     process: false,
-    global: false,
-    fs: "empty" // 不要会爆粗
+    global: false
   }
 }
