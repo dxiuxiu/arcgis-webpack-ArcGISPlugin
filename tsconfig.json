@@ -1,12 +1,41 @@
+
 {
     "compilerOptions": {
-        "outDir": "./dist",
-        "module": "es6", // amd
-        "target": "es5",
-        "allowJs": false, 
+      "outDir": "dist",
+      "moduleResolution": "node",
+      // "module": "esnext",
+      "module": "amd",
+      "target": "es5",
+      "lib": [
+        "es7",
+        "dom"
+      ],
+      "sourceMap": true,
+      "allowJs": true,
+      "jsx": "react",
+      "rootDir": "src/",
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noImplicitAny": false,
+      "strictNullChecks": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "skipDefaultLibCheck": true,
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
     },
     "include": [
-    "src/**/*"
-  ],
-  "exclude": ["node_modules"]
-}
+      "./src/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist",
+      "webpack.common.js",
+      "webpack.dev.js",
+      "webpack.prod.js",
+      "postcss.config.js",
+      "public"
+    ]
+  }
