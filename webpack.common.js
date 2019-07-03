@@ -43,7 +43,6 @@ module.exports = {
   plugins: [
     new ArcGISPlugin({
       useDefaultAssetLoaders: false,
-      locales : ['zh-cn']
     }),
     new HtmlWebPackPlugin({
       chunksSortMode: "none",
@@ -51,10 +50,10 @@ module.exports = {
     }),
   ],
   resolve: { // 不配置会报错
-    modules: [ // js
-      path.resolve(__dirname, "/src"),
-      path.resolve(__dirname, "node_modules/")
-    ],
+    // modules: [ // js
+    //   path.resolve(__dirname, "/src"),
+    //   path.resolve(__dirname, "node_modules/")
+    // ],
     extensions: [".ts", ".tsx", ".js", ".scss", ".css"] // ？
   },
   node: {
