@@ -12,7 +12,6 @@
       ],
       "sourceMap": true,
       "allowJs": true,
-      "jsx": "react",
       "rootDir": "src/",
       "forceConsistentCasingInFileNames": true,
       "noImplicitReturns": true,
@@ -35,7 +34,6 @@
       "webpack.common.js",
       "webpack.dev.js",
       "webpack.prod.js",
-      "postcss.config.js",
       "public"
     ]
   }
